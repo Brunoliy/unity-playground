@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using TMPro;
+using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,8 +16,7 @@ public class PlayerController : MonoBehaviour
     public int addJumps;
     public bool isGrounded;
     public float jumpForce;
-    public int life;
-    public TextMeshProUGUI lifeText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,8 +45,6 @@ public class PlayerController : MonoBehaviour
         {
             Attack();
         }
-
-        lifeText.text = life.ToString();
     }
     
     void FixedUpdate()
